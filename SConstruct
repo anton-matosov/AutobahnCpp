@@ -41,8 +41,7 @@ if env['CXX'].startswith('g++'):
                           '-pedantic',
                           '-Wno-deprecated-declarations',
                           '-Wno-unused-local-typedefs',
-                          '-Wl,--no-as-needed',
-                          '-pthread'])
+                          '-Wl,--no-as-needed'])
 
    env.Append(LINKFLAGS = ['-pthread'])
 
@@ -56,10 +55,9 @@ elif env['CXX'].startswith('clang++'):
                           '-Wall',
                           '-pedantic',
                           '-Wno-unused-value',
-                          '-Wno-deprecated',
-                          '-pthread'])
+                          '-Wno-deprecated'])
 
-   env.Append(LINKFLAGS = ['-stdlib=libc++', '-pthread'])
+   env.Append(LINKFLAGS = ['-stdlib=libc++'])
 
    print("Using clang toolchain")
 

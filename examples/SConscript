@@ -35,6 +35,6 @@ examples = ['subscribe1.cpp',
 prgs = []
 
 for e in examples:
-   prgs.append(env.Program(e, LIBS = ['boost_thread', 'boost_system', 'msgpack']))
+   prgs.append(env.Program(e, LIBS = ['boost_thread-mt', 'boost_system', 'msgpack']))
 
 Return('prgs')
